@@ -1,0 +1,86 @@
+body{
+font-family:Arial;
+background:#f4f6f8;
+text-align:center
+}
+
+h1{
+margin:20px
+}
+
+.dashboard{
+display:grid;
+grid-template-columns:repeat(2,220px);
+gap:20px;
+justify-content:center
+}
+
+.card{
+background:#fff;
+padding:15px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.1)
+}
+
+.card h3{
+margin-bottom:15px
+}
+
+.row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin:10px 0;
+font-size:15px
+}
+
+.row input{
+display:none
+}
+
+.toggle{
+width:50px;
+height:24px;
+background:#ccc;
+border-radius:20px;
+position:relative;
+cursor:pointer
+}
+
+.toggle::before{
+content:"OFF";
+position:absolute;
+left:5px;
+top:3px;
+font-size:10px;
+color:#fff
+}
+
+.toggle::after{
+content:"";
+width:18px;
+height:18px;
+background:#fff;
+border-radius:50%;
+position:absolute;
+top:3px;
+left:3px;
+transition:.3s
+}
+
+.row input:checked + .toggle{
+background:#4c7daf
+}
+
+.row input:checked + .toggle::before{
+content:"ON";
+left:26px
+}
+
+.row input:checked + .toggle::after{
+left:29px
+}
+
+.safe{
+background:#2196f3
+}
